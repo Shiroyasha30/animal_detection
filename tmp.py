@@ -12,8 +12,8 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 from PIL import Image
-from object_detection.utils import label_map_util
-from object_detection.utils import visualization_utils as viz_utils
+import label_map_util
+import visualization_utils as viz_utils
 import matplotlib.pyplot as plt
 
 
