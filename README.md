@@ -1,4 +1,5 @@
 # Title: Animal Detection with custom dataset
+created by: Yash Upadhyay, COE-2, 101903036
 
 ## 1. Methodology
 ![methodology diagram](images/methodology.jpg)
