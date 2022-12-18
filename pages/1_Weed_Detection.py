@@ -6,13 +6,13 @@ import numpy as np
 # import cv2
 import os
 
-@st.cache
-def load_model():
-    mod=torch.hub.load('ultralytics/yolov5','custom',path='weights\last.pt', force_reload=True)
-    return mod
+# @st.cache
+# def load_model():
+#     mod=torch.hub.load('ultralytics/yolov5','custom',path='weights\last.pt', force_reload=True)
+#     return mod
 
 def func1():
-    model= load_model()
+#     model= load_model()
 
     IMG_PATH= st.file_uploader('Insert image for detection', type=['jpg'])
     def predict(img):
@@ -25,26 +25,26 @@ def func1():
         box=np.squeeze(results.render())
         return box,present
 
-    if IMG_PATH is not None:
-        im=Image.open(IMG_PATH)
-        img=plt.imread(IMG_PATH)
-        box,present=predict(img)
-        if present:
-            st.write("Weed is present")
-        plt.imshow()
-        plt.show()
+#     if IMG_PATH is not None:
+#         im=Image.open(IMG_PATH)
+#         img=plt.imread(IMG_PATH)
+#         box,present=predict(img)
+#         if present:
+#             st.write("Weed is present")
+#         plt.imshow()
+#         plt.show()
         
-        col1, col2 = st.columns(2)
-        with col1:
-            st.image(im)
+#         col1, col2 = st.columns(2)
+#         with col1:
+#             st.image(im)
 
-        with col2:
-            IMAGE_SIZE = (8, 5)
-            fig, ax=plt.subplots(figsize=IMAGE_SIZE, dpi=200)
-            plt.axis("off")
-            plt.imshow()
-            plt.show()
-            st.pyplot(fig)
+#         with col2:
+#             IMAGE_SIZE = (8, 5)
+#             fig, ax=plt.subplots(figsize=IMAGE_SIZE, dpi=200)
+#             plt.axis("off")
+#             plt.imshow()
+#             plt.show()
+#             st.pyplot(fig)
 
 func1()
 
