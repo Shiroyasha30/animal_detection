@@ -5,6 +5,7 @@ from PIL import Image
 import numpy as np
 # import cv2
 import os
+import time
 
 # @st.cache
 # def load_model():
@@ -37,7 +38,7 @@ def func1():
         col1, col2 = st.columns(2)
         with col1:
             st.image(im)
-
+        time.sleep(0.5)
         with col2:
             st.image(im)
 #             IMAGE_SIZE = (8, 5)
