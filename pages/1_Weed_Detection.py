@@ -25,8 +25,8 @@ def func1():
         box=np.squeeze(results.render())
         return box,present
 
-#     if IMG_PATH is not None:
-#         im=Image.open(IMG_PATH)
+    if IMG_PATH is not None:
+        im=Image.open(IMG_PATH)
 #         img=plt.imread(IMG_PATH)
 #         box,present=predict(img)
 #         if present:
@@ -34,17 +34,19 @@ def func1():
 #         plt.imshow()
 #         plt.show()
         
-#         col1, col2 = st.columns(2)
-#         with col1:
-#             st.image(im)
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image(im)
 
-#         with col2:
+        with col2:
+            st.image(im)
 #             IMAGE_SIZE = (8, 5)
 #             fig, ax=plt.subplots(figsize=IMAGE_SIZE, dpi=200)
 #             plt.axis("off")
 #             plt.imshow()
 #             plt.show()
 #             st.pyplot(fig)
+        st.write("No weed detected")
 st.header('Weed Detection')
 func1()
 
