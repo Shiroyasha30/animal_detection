@@ -3,7 +3,7 @@ import torch
 from matplotlib import pyplot as plt
 from PIL import Image
 import numpy as np
-import cv2
+# import cv2
 import os
 
 @st.cache
@@ -27,7 +27,7 @@ def func1():
 
     if IMG_PATH is not None:
         im=Image.open(IMG_PATH)
-        img=cv2.imread(IMG_PATH)
+        img=plt.imread(IMG_PATH)
         box,present=predict(img)
         if present:
             st.write("Weed is present")
