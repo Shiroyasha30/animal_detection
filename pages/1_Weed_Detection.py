@@ -45,7 +45,7 @@ def func1():
 #             plt.imshow()
 #             plt.show()
 #             st.pyplot(fig)
-st.set_page_config(page_title='Weed Detection', layout='wide')
+st.header('Weed Detection')
 func1()
 
 # import torch
