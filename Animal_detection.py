@@ -137,8 +137,7 @@ def page2():
                     zone+="bottom"
 
                 st.write('Position : ', zone)
-                play_freq=play_freq[:1]
-                play_freq=play_freq+'k.wav'
+                play_freq=play_freq+'.wav'
                 st.audio(play_freq)
 
 
