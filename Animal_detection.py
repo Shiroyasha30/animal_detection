@@ -113,7 +113,8 @@ def page2():
                 bxs=detections['detection_boxes'][i]
                 detected_class=category_index.get(detections['detection_classes'][i])['name']
                 st.write('Class : ', detected_class)
-                st.write('Frequency to play : ', freq[freq['class']==detected_class]['frequency1'].values[0])
+                play_freq=freq[freq['class']==detected_class]['frequency1'].values[0]
+                st.write('Frequency to play : ', play_freq)
                 # print(bxs)
                 h, w, c=image_np_with_detections.shape
                 xmin = bxs[1]*w
@@ -136,6 +137,9 @@ def page2():
                     zone+="bottom"
 
                 st.write('Position : ', zone)
+                play_freq=play_freq[:1]
+                play_freq=play_freq+'k.wav'
+                st.audio(play_freq)
 
 
 
