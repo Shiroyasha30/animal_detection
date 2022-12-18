@@ -8,13 +8,13 @@ import os
 
 @st.cache
 def load_model():
-    mod=torch.hub.load('ultralytics/yolov5','custom',path='weights\last.pt')
+    mod=torch.hub.load('./yolov5','custom',path='weights\last.pt')
     return mod
 
 def func1():
     model= load_model()
 
-    IMG_PATH= st.file_uploader('Insert image for classification', type=['jpg'])
+    IMG_PATH= st.file_uploader('Insert image for detection', type=['jpg'])
     def predict(img):
         results=model(img)
         text=results.pandas().xyxy[0]
