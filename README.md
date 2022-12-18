@@ -15,6 +15,8 @@ then the frequency for the detected animal is displayed via the frequency datase
 
 ## 4. Live Link
 https://shiroyasha30-animal-detection-tmp-1pgatt.streamlit.app/
+change in link
+https://shiroyasha30-animal-detection-animal-detection-lgflrl.streamlit.app/
 
 ## 5. Screenshots of the Interface
 ![interface screenshot](images/1.jpg)
