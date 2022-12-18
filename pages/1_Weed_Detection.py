@@ -8,7 +8,7 @@ import os
 
 @st.cache
 def load_model():
-    mod=torch.hub.load('/','custom',path='weights\last.pt', force_reload=True)
+    mod=torch.hub.load('ultralytics/yolov5','custom',path='weights\last.pt', force_reload=True)
     return mod
 
 def func1():
